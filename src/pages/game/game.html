@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Game</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-grid *ngFor="let game of games">
+      <ion-row>
+        <ion-col col-12 class="center gameTitle" >{{game.date}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4  class="center" >{{game.t1}}</ion-col>
+        <ion-col col-4 class="center" >{{game.t1s}} : {{game.t2s}}</ion-col>
+        <ion-col col-4  class="center">{{game.t2}}</ion-col>
+      </ion-row>
+      <ion-row class="center" >
+        <ion-col col-12  class="center gameTime">{{game.time}}</ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

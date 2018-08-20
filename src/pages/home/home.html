@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title dir="rtl"> أخبار المونديال</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div *ngFor="let new of news" >  
+      <ion-card (click)="loadIt(new.id)">
+        <img src={{new.image}}/>
+        <ion-card-content>
+          <ion-card-title dir="rtl">
+            {{new.title}}
+            </ion-card-title>
+          
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,81 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>LineUp</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  
+    
+    
+
+    <ion-grid dir="rtl">
+
+      <ion-row class="black">
+        <ion-col col-10 class="center">مدرب</ion-col>
+        <ion-col col-2 class="center">النادي</ion-col>
+      </ion-row>
+      <ion-row >
+        <ion-col col-1 class="center"></ion-col>
+        <ion-col col-4 class="right" >خوان أنتونيو بيتزي</ion-col>
+        <ion-col col-5 class="right" >Juan Antonio Pizzi</ion-col>
+        <ion-col col-2 class="center"></ion-col>
+      </ion-row>
+
+
+
+      <ion-row class="black" >
+        <ion-col col-10 class="center">حارس </ion-col>
+        <ion-col col-2 class="center">النادي</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let goal of goalkeeper">
+        <ion-col col-1 class="center" >{{goal.number}}</ion-col>
+        <ion-col col-4 class="right" >{{goal.nameA}}</ion-col>
+        <ion-col col-5 class="right">{{goal.nameF}}</ion-col>
+        <ion-col col-2 class="center">{{goal.club}}</ion-col>
+      </ion-row>
+
+      <ion-row class="black">
+        <ion-col col-10 class="center">دفاع</ion-col>
+        <ion-col col-2 class="center">النادي</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let def of defense">
+        <ion-col col-1 class="center" >{{def.number}}</ion-col>
+        <ion-col col-4 class="right" >{{def.nameA}}</ion-col>
+        <ion-col col-5 class="right">{{def.nameF}}</ion-col>
+        <ion-col col-2 class="center">{{def.club}}</ion-col>
+      </ion-row>
+
+      <ion-row class="black">
+        <ion-col col-10 class="center">وسط</ion-col>
+        <ion-col col-2 class="center">النادي</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let mid of middle">
+        <ion-col col-1 class="center" >{{mid.number}}</ion-col>
+        <ion-col col-4 class="right" >{{mid.nameA}}</ion-col>
+        <ion-col col-5 class="right">{{mid.nameF}}</ion-col>
+        <ion-col col-2 class="center">{{mid.club}}</ion-col>
+      </ion-row>
+
+      <ion-row class="black">
+        <ion-col col-10 class="center">هجوم</ion-col>
+        <ion-col col-2 class="center">النادي</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let att of attak">
+        <ion-col col-1 class="center" >{{att.number}}</ion-col>
+        <ion-col col-4 class="right" >{{att.nameA}}</ion-col>
+        <ion-col col-5 class="right">{{att.nameF}}</ion-col>
+        <ion-col col-2 class="center">{{att.club}}</ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+</ion-content>
